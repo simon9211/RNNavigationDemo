@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import SearchInput from './searchInput';
-// import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
+import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
 const { width, height } = Dimensions.get('window');
 
@@ -31,11 +31,12 @@ const { width, height } = Dimensions.get('window');
             city={true} 
             navigation = {this.props.navigation}
         />
-        {/* <ScrollableTabView
+        <ScrollableTabView
             renderTabBar={() => <DefaultTabBar/> }
             tabBarUnderlineStyle={{
                 backgroundColor: '#000',
-                height: 2
+                height: 2,
+                width: width / 2,
             }}
             tabBarBackgroundColor='#ffffff'
             tabBarActiveTextColor='#000'
@@ -43,13 +44,14 @@ const { width, height } = Dimensions.get('window');
             tabBarTextStyle={{ fontSize: 14}}
             locked={false}
         >
-            <View tabLabel='正在热映' style={{marginBottom: 50}}>
+            <View tabLabel='正在热映' style={{marginBottom: 50, backgroundColor: '#ff0000'}}>
+                <Text>'正在热映'</Text>
+            </View>
 
+            <View tabLabel='即将上映' style={{marginBottom: 50, backgroundColor: '#00ff00'}}>
+                <Text>'即将上映'</Text>
             </View>
-            <View tabLabel='即将上映' style={{marginBottom: 50}}>
-                
-            </View>
-        </ScrollableTabView> */}
+        </ScrollableTabView>
         <Text>MoviesScreen!</Text>
         <Button 
           title="go to movie detail"

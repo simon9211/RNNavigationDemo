@@ -20,11 +20,11 @@ import {
             <Text>FindMovieScreen!</Text>
             <Button 
                 title="go to Home"
-                //onPress={() => this.props.navigation.navigate('Home')}
+                onPress={() => this.props.navigation.navigate('Home')}
             />
             <Button 
                 title="go to Detail"
-                //onPress={() => this.props.navigation.navigate('Detail')}
+                onPress={() => this.props.navigation.navigate('Detail')}
             />
           </View>
         );
