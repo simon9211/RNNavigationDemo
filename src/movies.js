@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import SearchInput from './searchInput';
-import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
+// import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
 const { width, height } = Dimensions.get('window');
 
@@ -27,10 +27,10 @@ const { width, height } = Dimensions.get('window');
   render() {
     return (
     <View style={{ width: width, height: height, paddingTop: 25, backgroundColor:'#fff' }}>
-        {/* <SearchInput 
+        <SearchInput 
             city={true} 
             navigation = {this.props.navigation}
-        /> */}
+        />
         {/* <ScrollableTabView
             renderTabBar={() => <DefaultTabBar/> }
             tabBarUnderlineStyle={{
