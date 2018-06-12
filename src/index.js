@@ -101,9 +101,11 @@ const TabRootStack = createBottomTabNavigator(
                 } else if (routeName === 'Mine') {
                     routeNameDes = '我的'
                 }
-                return  <Text>
-                        {routeNameDes}
-                        </Text>
+                return  <Text style={{
+                            textAlign:'center',
+                            alignContent:'center',
+                            alignItems: 'center'
+                        }}>{routeNameDes}</Text>
             }
             ,
             tabBarIcon: ({ focused, tintColor }) => {
