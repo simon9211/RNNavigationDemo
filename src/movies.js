@@ -16,7 +16,7 @@ import {
 
 import SearchInput from './searchInput';
 // import Star from './star';
-// import HotList from './hotList';
+import HotList from './hotList';
 
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
@@ -48,7 +48,7 @@ const { width, height } = Dimensions.get('window');
             locked={false}
         >
             <View tabLabel='正在热映' style={{marginBottom: 50, backgroundColor: '#ff0000'}}>
-                {/* <HotList navigation={this.props.navigation} /> */}
+                <HotList navigation={this.props.navigation} />
             </View>
 
             <View tabLabel='即将上映' style={{marginBottom: 50, backgroundColor: '#00ff00'}}>

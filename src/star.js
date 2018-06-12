@@ -14,31 +14,31 @@ import {
 
  export default class Star extends React.Component {
     static defaultProps = {
-        value:"35",
+        v:"35",
         width: 12,
         height: 12
      };
-    static propTypes = {
-        value: React.PropTypes.string.isRequired,
-    };
+    // static propTypes = {
+    //     value: React.PropTypes.string.isRequired,
+    // };
 
     constructor(props) {
         super(props);
     };
 
     _starsRender = (props) => {
-        const { value, width, height } = props;
+        const { v, width, height } = props;
         const results = [];
         let flag = true;
-        if (value == "00") {
+        if (v == "00") {
             return <Text style={styles.smallFont}>暂无评分</Text>;
         }
 
         for (let i = 0; i < 5; i++) {
-            if (i < value[0]) {
+            if (i < v[0]) {
                 results.push(<Image key={i} style={{width: width, height: height}} source={require('./resource/star-full.png')}/>);
             } else {
-                if (flag && value[1] == '5') {
+                if (flag && v[1] == '5') {
                     flag = false;
                     results.push(<Image key={i} style={{width: width, height: height}} source={require('./resource/star-half.png')}/>);
                 } else {
