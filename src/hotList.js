@@ -35,14 +35,18 @@ import Star from './star';
     }
 
     _fetchData = () => {
-        fetch('https://api.douban.com/v2/movie/in_theaters')
-        .then((response) => {
+        fetch('https://api.douban.com/v2/movie/in_theaters',{
+            method: 'GET',
+            headers: {
+            'Accept': 'application/json',
+            'cache-control': 'no-cache',
+             }
+        })
+        .then((response) => response.json())
+        .then((responseText) => {
             this.setState({
                 refreshing: false
             });
-            return response.json();
-        })
-        .then((responseText) => {
             let arrData = responseText.subjects;
             let i = 0;
             let arrList = [];
@@ -51,6 +55,7 @@ import Star from './star';
                 i++;
             })
             this.setState({movies: arrList, ready: false, refreshing: false});
+            console.log(arrList)
         }).catch((error) => {
             alert(error.toString());
         });
