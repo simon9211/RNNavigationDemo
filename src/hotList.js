@@ -17,7 +17,7 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-import HotMovieCell from './common/movieCell';
+import HotMovieCell from './common/hotMovieCell';
 
  export default class HotList extends React.Component {
     constructor(props) {

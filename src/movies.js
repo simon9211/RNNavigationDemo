@@ -15,8 +15,8 @@ import {
 } from 'react-native';
 
 import SearchInput from './searchInput';
-// import Star from './star';
 import HotList from './hotList';
+import SoonList from './soonList';
 
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 
@@ -52,14 +52,14 @@ const { width, height } = Dimensions.get('window');
             </View>
 
             <View tabLabel='即将上映' style={{marginBottom: 50}}>
-                <Text>'即将上映'</Text>
+                <SoonList navigation={this.props.navigation} />
             </View>
         </ScrollableTabView>
-        <Text>MoviesScreen!</Text>
+        {/* <Text>MoviesScreen!</Text>
         <Button 
           title="go to movie detail"
           onPress={() => this.props.navigation.navigate('MovieDetail')}
-        />
+        /> */}
         {/* <Button 
           title="go to Detail"
           //onPress={() => this.props.navigation.navigate('Detail')}

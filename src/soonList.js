@@ -17,7 +17,7 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-import MovieCell from './common/movieCell';
+import SoonMovieCell from './common/soonMovieCell';
 
  export default class SoonList extends React.Component {
     constructor(props) {
@@ -34,7 +34,7 @@ import MovieCell from './common/movieCell';
     }
 
     _fetchData = () => {
-        fetch('https://api.douban.com/v2/movie/in_theaters',{
+        fetch('https://api.douban.com/v2/movie/coming_soon',{
             method: 'GET',
             headers: {
             'Accept': 'application/json',
@@ -77,7 +77,7 @@ import MovieCell from './common/movieCell';
                 refreshing={this.state.refreshing}
                 key={movies.key}
                 renderItem={({item}) => {
-                    return <MovieCell item={item} moviesCount={movies.length}/>
+                    return <SoonMovieCell item={item} moviesCount={movies.length}/>
                 }}/>}
           </View>
         ); 
