@@ -79,7 +79,8 @@ import Star from './star';
                 refreshing={this.state.refreshing}
                 key={movies.key}
                 renderItem={({item}) => {
-                    <TouchableOpacity
+                    return (
+                        <TouchableOpacity
                         style={[
                             styles.hotList, item.key + 1 == movies.length && styles.lastList
                         ]}
@@ -129,13 +130,9 @@ import Star from './star';
                                 </TouchableOpacity>
                             </View>
                         </View>
-
-
-
-
                     </TouchableOpacity>
-                }}/>
-              }
+                    )
+                }}/>}
           </View>
         ); 
     }

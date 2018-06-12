@@ -47,11 +47,11 @@ const { width, height } = Dimensions.get('window');
             tabBarTextStyle={{ fontSize: 14}}
             locked={false}
         >
-            <View tabLabel='正在热映' style={{marginBottom: 50, backgroundColor: '#ff0000'}}>
+            <View tabLabel='正在热映' style={{marginBottom: 50}}>
                 <HotList navigation={this.props.navigation} />
             </View>
 
-            <View tabLabel='即将上映' style={{marginBottom: 50, backgroundColor: '#00ff00'}}>
+            <View tabLabel='即将上映' style={{marginBottom: 50}}>
                 <Text>'即将上映'</Text>
             </View>
         </ScrollableTabView>
