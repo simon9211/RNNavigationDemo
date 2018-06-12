@@ -17,9 +17,9 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-import HotMovieCell from './common/movieCell';
+import MovieCell from './common/movieCell';
 
- export default class HotList extends React.Component {
+ export default class SoonList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -77,7 +77,7 @@ import HotMovieCell from './common/movieCell';
                 refreshing={this.state.refreshing}
                 key={movies.key}
                 renderItem={({item}) => {
-                    return <HotMovieCell item={item} moviesCount={movies.length}/>
+                    return <MovieCell item={item} moviesCount={movies.length}/>
                 }}/>}
           </View>
         ); 
