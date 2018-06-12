@@ -12,7 +12,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import Star from '../star';
+import Star from './star';
  export default class MovieCell extends React.Component {
     static defaultProps = {
        item: null,

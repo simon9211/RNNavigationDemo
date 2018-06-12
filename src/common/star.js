@@ -36,13 +36,13 @@ import {
 
         for (let i = 0; i < 5; i++) {
             if (i < v[0]) {
-                results.push(<Image key={i} style={{width: width, height: height}} source={require('./resource/star-full.png')}/>);
+                results.push(<Image key={i} style={{width: width, height: height}} source={require('../resource/star-full.png')}/>);
             } else {
                 if (flag && v[1] == '5') {
                     flag = false;
-                    results.push(<Image key={i} style={{width: width, height: height}} source={require('./resource/star-half.png')}/>);
+                    results.push(<Image key={i} style={{width: width, height: height}} source={require('../resource/star-half.png')}/>);
                 } else {
-                    results.push(<Image key={i} style={{width: width, height: height}} source={require('./resource/star-empty.png')}/>);
+                    results.push(<Image key={i} style={{width: width, height: height}} source={require('../resource/star-empty.png')}/>);
                 }
             }   
         }
