@@ -175,9 +175,44 @@ const movieInfo = 'https://api.douban.com/v2/movie/subject';
                   <Text style={{
                     color:'red',
                     fontWeight:'900',
-                    // marginRight: 20
                   }}>¥32起></Text>
                 </TouchableOpacity>  
+              </View>
+              <View>
+                <Text style={{fontSize: 13, marginBottom: 12, marginLeft: 12, marginTop: 20, color:'#9b9b9b'}}>剧情介绍</Text>
+                <View>
+                  <Text style={{fontSize: 13, marginBottom: 12, marginLeft: 12, marginRight: 12, marginTop: 20}} numberOfLines={this.state.num} ellipsizeMode='tail'>{summary}</Text>
+                  <TouchableOpacity onPress={()=>{
+                    this.state.num === 0?this.setState({num:3}):this.setState({num:0});
+                  }}>
+                    <Text style={{color:"#2CBA48",marginLeft: 15}}>{this.state.num!=0?'展开':'合上'}</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+              <View>
+                <Text style={{fontSize: 13, marginBottom: 12, marginLeft: 12, marginTop: 20, color:'#9b9b9b'}}>演员</Text>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                  <View style={{margin: 10, flexDirection:'row'}}>
+                    {
+                      casts.map((x,i) => {
+                        return (
+                          <View
+                            style={{width:80, height: 160, justifyContent:'center', alignItems:'center', marginRight: 6}}
+                            key={i}>
+                            <Image 
+                              source={{uri:x.avatars.large}}
+                              style={{width: 80, height: 120}}
+                              />
+                            <Text
+                              style={{lineHeight: 22}}
+                              numberOfLines={1}
+                              ellipsizeMode='tail'>{x.name}</Text>
+                          </View>
+                        );
+                      })
+                    }
+                  </View>
+                </ScrollView>
               </View>
             </View>
             }
