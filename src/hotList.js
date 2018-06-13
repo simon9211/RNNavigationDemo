@@ -77,7 +77,7 @@ import HotMovieCell from './common/hotMovieCell';
                 refreshing={this.state.refreshing}
                 key={movies.key}
                 renderItem={({item}) => {
-                    return <HotMovieCell item={item} moviesCount={movies.length}/>
+                    return <HotMovieCell item={item} moviesCount={movies.length} navigation={this.props.navigation}/>
                 }}/>}
           </View>
         ); 

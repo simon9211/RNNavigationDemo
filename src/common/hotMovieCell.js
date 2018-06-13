@@ -13,7 +13,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Star from './star';
- export default class MovieCell extends React.Component {
+ export default class HotMovieCell extends React.Component {
     static defaultProps = {
        item: null,
        movies: 0
@@ -25,17 +25,19 @@ import Star from './star';
 
     render() {
         const {item ,movies} = this.props;
+        const {navigate} = this.props.navigation;
         return (
             <TouchableOpacity
                 style={[
                     styles.hotList, item.key + 1 == movies && styles.lastList
                 ]}
-                onPress={() => navigate('Detail', {
+                onPress={() => navigate('MovieDetail', {
                     id: item.value.id,
                     callback: (data) => {
                         //this.setState({childState: data})
                     }
                 })}
+                // onPress = {() => alert(navigate)}
                 >
                 <View style={{
                     flex: 1

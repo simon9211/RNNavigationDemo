@@ -78,7 +78,7 @@ const FindMovieStack = createStackNavigator(
 const MineStack = createStackNavigator(
     {
         Mine: MineScreen,
-        MineDetail: MovieDetailScreen,
+        // MineDetail: MovieDetailScreen,
     }
 );
 
