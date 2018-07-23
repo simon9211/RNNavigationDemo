@@ -18,7 +18,6 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Star from './common/star';
-
 const { width, height } = Dimensions.get('window');
 const movieInfo = 'https://api.douban.com/v2/movie/subject';
 
@@ -197,16 +196,37 @@ const movieInfo = 'https://api.douban.com/v2/movie/subject';
                       casts.map((x,i) => {
                         return (
                           <View
-                            style={{width:80, height: 160, justifyContent:'center', alignItems:'center', marginRight: 6}}
+                            style={{width:80, height: 160, justifyContent:'center',alignItems:'flex-start', marginRight: 6}}
                             key={i}>
                             <Image 
                               source={{uri:x.avatars.large}}
-                              style={{width: 80, height: 120}}
+                              style={{width: 80, height: 120, marginTop:10}}
                               />
                             <Text
-                              style={{lineHeight: 22}}
+                              style={{textAlign:'center'}}
                               numberOfLines={1}
                               ellipsizeMode='tail'>{x.name}</Text>
+                          </View>
+                        );
+                      })
+                    }
+                  </View>
+                </ScrollView>
+              </View>
+              <View>
+                <Text style={{fontSize: 13, marginBottom: 12, marginLeft: 12, marginTop: 20, color:'#9b9b9b'}}>预告片/剧照</Text>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                  <View style={{margin: 10, flexDirection:'row'}}>
+                    {
+                      photos.map((x,i) => {
+                        return (
+                          <View
+                            style={{width:140, height: 100, justifyContent:'center',alignItems:'center', marginRight: 6}}
+                            key={i}>
+                            <Image 
+                              source={{uri:x.image.replace('webp', 'png')}}
+                              style={{width: 140, height: 100}}
+                              />
                           </View>
                         );
                       })
