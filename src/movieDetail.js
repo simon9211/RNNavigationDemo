@@ -203,7 +203,7 @@ const movieInfo = 'https://api.douban.com/v2/movie/subject';
                               style={{width: 80, height: 120, marginTop:10}}
                               />
                             <Text
-                              style={{textAlign:'center'}}
+                              style={{textAlign:'center', width: 80}}
                               numberOfLines={1}
                               ellipsizeMode='tail'>{x.name}</Text>
                           </View>
