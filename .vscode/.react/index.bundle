@@ -83341,6 +83341,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         };
     }
 
+    var movieHotList = 'https://api.douban.com/v2/movie/in_theaters';
+    var start = 0;
+    var count = 10;
+    var total = 0;
+
     var HotList = _wrapComponent("HotList")(function (_React$Component) {
         _inherits(HotList, _React$Component);
 
@@ -83350,22 +83355,36 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             var _this = _possibleConstructorReturn(this, (HotList.__proto__ || Object.getPrototypeOf(HotList)).call(this, props));
 
             _this._fetchData = function () {
-                fetch('https://api.douban.com/v2/movie/in_theaters', {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                        'cache-control': 'no-cache'
-                    }
-                }).then(function (response) {
-                    return response.json();
-                }).then(function (responseText) {
+                if (_this.state.movies.length == total && _this.state.movies != 0) {
+                    alert('no more data');
+
                     _this.setState({
-                        refreshing: false
+                        showFoot: 1
                     });
 
-                    var arrData = responseText.subjects;
-                    var i = 0;
-                    var arrList = [];
+                    return;
+                }
+
+                var formData = new FormData();
+                formData.append('apikey', '0b2bdeda43b5688921839c8ecb20399b');
+                formData.append('city', _this.state.city);
+                formData.append('client', 'something');
+                formData.append('udid', 'dddddddddddddddddddddd');
+                formData.append('start', start);
+                formData.append('count', count);
+                fetch(movieHotList, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'multipart/form-data'
+                    },
+                    body: formData
+                }).then(function (Response) {
+                    return Response.json();
+                }).then(function (data) {
+                    var arrData = data.subjects;
+                    var i = _this.state.refreshing ? 0 : _this.state.movies.length;
+                    var arrList = _this.state.refreshing ? [] : _this.state.movies;
                     arrData.map(function (item) {
                         arrList.push({
                             key: i,
@@ -83373,18 +83392,23 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         });
                         i++;
                     });
+                    total = data.total;
 
                     _this.setState({
                         movies: arrList,
                         ready: false,
-                        refreshing: false
+                        refreshing: false,
+                        refreshing: false,
+                        showFoot: 0
                     });
                 }).catch(function (error) {
                     alert(error.toString());
                 });
             };
 
-            _this._refreshDate = function () {
+            _this._refreshData = function () {
+                start = 0;
+
                 _this.setState({
                     refreshing: true
                 });
@@ -83395,6 +83419,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             _this.state = {
                 ready: true,
                 refreshing: false,
+                city: '上海',
+                showFoot: 0,
                 movies: []
             };
             return _this;
@@ -83403,6 +83429,117 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         _createClass(HotList, [{
             key: "componentDidMount",
             value: function componentDidMount() {
+                this._fetchData();
+            }
+        }, {
+            key: "_renderLoadingView",
+            value: function _renderLoadingView() {
+                return _react3.default.createElement(_reactNative.ActivityIndicator, {
+                    size: "large",
+                    style: styles.loadding,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 92
+                    }
+                });
+            }
+        }, {
+            key: "_renderFooter",
+            value: function _renderFooter() {
+                if (this.state.showFoot === 1) {
+                    return _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: {
+                                height: 30,
+                                alignItems: 'center',
+                                justifyContent: 'flex-start'
+                            },
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 99
+                            }
+                        },
+                        _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                                style: {
+                                    color: '#999999',
+                                    fontSize: 14,
+                                    marginTop: 5,
+                                    marginBottom: 5
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 100
+                                }
+                            },
+                            "\u6CA1\u6709\u66F4\u591A\u6570\u636E\u4E86"
+                        )
+                    );
+                } else if (this.state.showFoot === 2) {
+                    return _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: styles.footer,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 105
+                            }
+                        },
+                        _react3.default.createElement(_reactNative.ActivityIndicator, {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 106
+                            }
+                        }),
+                        _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 107
+                                }
+                            },
+                            "\u6B63\u5728\u52A0\u8F7D\u66F4\u591A\u6570\u636E..."
+                        )
+                    );
+                } else if (this.state.showFoot === 0) {
+                    return _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: styles.footer,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 112
+                            }
+                        },
+                        _react3.default.createElement(_reactNative.Text, {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 113
+                            }
+                        })
+                    );
+                }
+            }
+        }, {
+            key: "_onEndReached",
+            value: function _onEndReached() {
+                if (this.state.showFoot != 0) {
+                    return;
+                }
+
+                if (this.state.movies.length != 0 && this.state.movies.length == total) {
+                    return;
+                } else {
+                    start++;
+                }
+
+                this.setState({
+                    showFoot: 2
+                });
+
                 this._fetchData();
             }
         }, {
@@ -83417,19 +83554,12 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 71
+                            lineNumber: 141
                         }
                     },
-                    this.state.ready ? _react3.default.createElement(_reactNative.ActivityIndicator, {
-                        size: "large",
-                        style: styles.loadding,
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 73
-                        }
-                    }) : _react3.default.createElement(_reactNative.FlatList, {
+                    this.state.ready ? this._renderLoadingView() : _react3.default.createElement(_reactNative.FlatList, {
                         data: movies,
-                        onRefresh: this._refreshDate,
+                        onRefresh: this._refreshData,
                         refreshing: this.state.refreshing,
                         key: movies.key,
                         renderItem: function renderItem(_ref) {
@@ -83440,13 +83570,16 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 navigation: _this2.props.navigation,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 80
+                                    lineNumber: 150
                                 }
                             });
                         },
+                        ListFooterComponent: this._renderFooter.bind(this),
+                        onEndReached: this._onEndReached.bind(this),
+                        onEndReachedThreshold: 1,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 74
+                            lineNumber: 144
                         }
                     })
                 );
@@ -83471,6 +83604,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             width: 12,
             height: 12,
             marginRight: 2
+        },
+        footer: {
+            flexDirection: 'row',
+            height: 24,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: 10
         }
     });
 },656,[118,130,12,657],"src/hotList.js");
