@@ -40,13 +40,18 @@ const movieInfo = 'https://api.douban.com/v2/movie/subject';
         backgroundColor: '#2a362c',
         opacity: 1,
       },
-      // headerLeft: (
-      //   <Button
-      //     onPress={() => navigation.goBack()}
-      //     title="info"
-      //     color="#fff"
-      //   />
-      // ),
+      headerLeft: (
+        <Button
+          onPress={() => {
+            navigation.goBack()
+            if (navigation.state.params.callback) {
+              navigation.state.params.callback('hhh')
+            }
+          }}
+          title="info"
+          color="#fff"
+        />
+      ),
 
     });
 

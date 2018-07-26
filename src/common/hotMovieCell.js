@@ -34,6 +34,7 @@ import Star from './star';
                 onPress={() => navigate('MovieDetail', {
                     id: item.value.id,
                     callback: (data) => {
+                        alert(data)
                         //this.setState({childState: data})
                     }
                 })}
