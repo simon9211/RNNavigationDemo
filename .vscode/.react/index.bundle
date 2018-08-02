@@ -83774,13 +83774,50 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                     lineNumber: 62
                                 }
                             },
-                            _react3.default.createElement(_star2.default, {
-                                value: item.value.rating.stars,
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 63
-                                }
-                            })
+                            item.value.rating.average > 0 ? _react3.default.createElement(
+                                _reactNative.View,
+                                {
+                                    style: {
+                                        flexDirection: 'row'
+                                    },
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 64
+                                    }
+                                },
+                                _react3.default.createElement(_star2.default, {
+                                    value: item.value.rating.stars,
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 65
+                                    }
+                                }),
+                                _react3.default.createElement(
+                                    _reactNative.Text,
+                                    {
+                                        style: {
+                                            marginLeft: 5
+                                        },
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 66
+                                        }
+                                    },
+                                    item.value.rating.average.toString()
+                                )
+                            ) : _react3.default.createElement(
+                                _reactNative.Text,
+                                {
+                                    style: {
+                                        fontSize: 12
+                                    },
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 68
+                                    }
+                                },
+                                "\u6682\u65E0\u8BC4\u5206"
+                            )
                         ),
                         _react3.default.createElement(
                             _reactNative.Text,
@@ -83788,7 +83825,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 style: styles.smallFont,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 65
+                                    lineNumber: 71
                                 }
                             },
                             "\u5BFC\u6F14\uFF1A",
@@ -83800,7 +83837,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 style: styles.smallFont,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 66
+                                    lineNumber: 72
                                 }
                             },
                             "\u4E3B\u6F14\uFF1A",
@@ -83818,7 +83855,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 67
+                                    lineNumber: 73
                                 }
                             },
                             item.value.collect_count.toString(),
@@ -83833,7 +83870,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 74
+                                lineNumber: 80
                             }
                         },
                         _react3.default.createElement(
@@ -83845,7 +83882,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 style: styles.pay,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 77
+                                    lineNumber: 83
                                 }
                             },
                             _react3.default.createElement(
@@ -83857,7 +83894,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                     },
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 80
+                                        lineNumber: 86
                                     }
                                 },
                                 "\u8D2D\u7968"

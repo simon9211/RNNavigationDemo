@@ -60,7 +60,13 @@ import Star from './star';
                     }}>
                     <Text style={styles.title}>{item.value.title}</Text>
                     <View style={{marginTop:3,marginBottom:3}}>
-                        <Star value={item.value.rating.stars}/>
+                        { item.value.rating.average > 0
+                        ?<View style={{flexDirection: 'row'}}>
+                            <Star value={item.value.rating.stars}/>
+                            <Text style={{marginLeft: 5}}>{item.value.rating.average.toString()}</Text>
+                         </View>
+                        :<Text style={{fontSize: 12}}>暂无评分</Text>
+                        }
                     </View>
                     <Text style={styles.smallFont}>导演：{item.value.directors[0].name}</Text>
                     <Text style={styles.smallFont}>主演：{item.value.casts.map((v) => v.name).join('/')}</Text>
