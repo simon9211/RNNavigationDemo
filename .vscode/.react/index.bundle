@@ -83355,7 +83355,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             var _this = _possibleConstructorReturn(this, (HotList.__proto__ || Object.getPrototypeOf(HotList)).call(this, props));
 
             _this._fetchData = function () {
-                if (_this.state.movies.length == total && _this.state.movies != 0) {
+                if (_this.state.movies.length == total && _this.state.movies != 0 && !_this.state.refreshing) {
                     alert('no more data');
 
                     _this.setState({
@@ -83372,6 +83372,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 formData.append('udid', 'dddddddddddddddddddddd');
                 formData.append('start', start);
                 formData.append('count', count);
+                console.log('params start:' + start + ' count:' + count);
                 fetch(movieHotList, {
                     method: 'POST',
                     headers: {
@@ -83383,13 +83384,20 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     return Response.json();
                 }).then(function (data) {
                     var arrData = data.subjects;
-                    var i = _this.state.refreshing ? 0 : _this.state.movies.length;
-                    var arrList = _this.state.refreshing ? [] : _this.state.movies;
+                    var i = 0;
+                    var arrList = [];
+
+                    if (!_this.state.refreshing) {
+                        i = _this.state.movies.length;
+                        arrList = _this.state.movies;
+                    }
+
                     arrData.map(function (item) {
                         arrList.push({
                             key: i,
                             value: item
                         });
+                        console.log(i + '' + item.title);
                         i++;
                     });
                     total = data.total;
@@ -83408,12 +83416,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
             _this._refreshData = function () {
                 start = 0;
+                console.log('before refreshing : ' + _this.state.refreshing);
 
                 _this.setState({
                     refreshing: true
-                });
+                }, _this._fetchData);
 
-                _this._fetchData();
+                console.log('after refreshing : ' + _this.state.refreshing);
             };
 
             _this.state = {
@@ -83439,7 +83448,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     style: styles.loadding,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 92
+                        lineNumber: 104
                     }
                 });
             }
@@ -83457,7 +83466,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 99
+                                lineNumber: 111
                             }
                         },
                         _react3.default.createElement(
@@ -83471,7 +83480,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 100
+                                    lineNumber: 112
                                 }
                             },
                             "\u6CA1\u6709\u66F4\u591A\u6570\u636E\u4E86"
@@ -83484,13 +83493,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             style: styles.footer,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 105
+                                lineNumber: 117
                             }
                         },
                         _react3.default.createElement(_reactNative.ActivityIndicator, {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 106
+                                lineNumber: 118
                             }
                         }),
                         _react3.default.createElement(
@@ -83498,7 +83507,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             {
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 107
+                                    lineNumber: 119
                                 }
                             },
                             "\u6B63\u5728\u52A0\u8F7D\u66F4\u591A\u6570\u636E..."
@@ -83511,13 +83520,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             style: styles.footer,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 112
+                                lineNumber: 124
                             }
                         },
                         _react3.default.createElement(_reactNative.Text, {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 113
+                                lineNumber: 125
                             }
                         })
                     );
@@ -83531,16 +83540,21 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 }
 
                 if (this.state.movies.length != 0 && this.state.movies.length == total) {
+                    this.setState({
+                        showFoot: 1
+                    });
                     return;
                 } else {
-                    start++;
+                    start += count;
                 }
 
                 this.setState({
                     showFoot: 2
                 });
 
-                this._fetchData();
+                if (start > 0) {
+                    this._fetchData();
+                }
             }
         }, {
             key: "render",
@@ -83554,7 +83568,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 141
+                            lineNumber: 157
                         }
                     },
                     this.state.ready ? this._renderLoadingView() : _react3.default.createElement(_reactNative.FlatList, {
@@ -83570,7 +83584,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 navigation: _this2.props.navigation,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 150
+                                    lineNumber: 166
                                 }
                             });
                         },
@@ -83579,7 +83593,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         onEndReachedThreshold: 1,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 144
+                            lineNumber: 160
                         }
                     })
                 );

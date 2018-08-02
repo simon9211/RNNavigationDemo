@@ -24,6 +24,7 @@ const movieHotList = 'https://api.douban.com/v2/movie/in_theaters';
 let start = 0;
 let count = 10;
 let total = 0;
+
  export default class HotList extends React.Component {
     constructor(props) {
         super(props);
@@ -41,7 +42,7 @@ let total = 0;
     }
 
     _fetchData = () => {
-        if (this.state.movies.length == total && this.state.movies != 0) {
+        if (this.state.movies.length == total && this.state.movies != 0 && !this.state.refreshing) {
             alert('no more data')
             this.setState({
                 showFoot: 1
@@ -56,6 +57,8 @@ let total = 0;
         formData.append('start', start)
         formData.append('count', count)
 
+        console.log('params start:' + start + ' count:' + count)
+
         fetch(movieHotList, {
             method: 'POST',
             headers: {
@@ -67,10 +70,16 @@ let total = 0;
         .then((Response) => Response.json())
         .then((data) => {
             let arrData = data.subjects;
-            let i = this.state.refreshing?0:this.state.movies.length;
-            let arrList = this.state.refreshing?[]:this.state.movies;
+
+            let i = 0
+            let arrList = []
+            if (!this.state.refreshing) {
+                i = this.state.movies.length
+                arrList = this.state.movies
+            } 
             arrData.map(item => {
                 arrList.push({key: i, value: item});
+                console.log(i + '' + item.title)
                 i++;
             })
             total = data.total
@@ -83,8 +92,11 @@ let total = 0;
     
     _refreshData = () => {
         start = 0;
-        this.setState({refreshing: true});
-        this._fetchData();
+        console.log('before refreshing : ' + this.state.refreshing)
+        this.setState({refreshing: true}, this._fetchData);
+        console.log('after refreshing : ' + this.state.refreshing)
+
+        //this._fetchData();
     }
 
     _renderLoadingView() {
@@ -127,14 +139,15 @@ let total = 0;
             })
             return;
         } else {
-            start++
+            start += count
         }
 
         this.setState({
             showFoot: 2
         })
-
-        this._fetchData()
+        if (start > 0) {
+            this._fetchData()   
+        }
     }
 
     render() {
@@ -155,6 +168,7 @@ let total = 0;
                 ListFooterComponent={this._renderFooter.bind(this)}
                 onEndReached={this._onEndReached.bind(this)}
                 onEndReachedThreshold={1}
+
                 />}
           </View>
         ); 
