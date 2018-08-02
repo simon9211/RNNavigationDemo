@@ -22,6 +22,7 @@ import MoviesScreen from './movies';
 import FindMovieScreen from './findMovie';
 import MineScreen from './mine';
 import MovieDetailScreen from './movieDetail';
+import SearchMovieScreen from './searchView';
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader'])
 console.ignoredYellowBox = ['Remote debugger','Class RCTCxxModule was not exported.'];
@@ -53,6 +54,7 @@ const MoviesStack = createStackNavigator(
     {
         Movies: MoviesScreen,
         MovieDetail: MovieDetailScreen,
+        SearchIng: SearchMovieScreen,
     },
     {
         initialRouteName: 'Movies',

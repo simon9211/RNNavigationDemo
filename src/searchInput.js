@@ -46,7 +46,17 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
                     </TouchableOpacity>
                 }
 
-                <TouchableOpacity style={styles.search} onPress={() => navigate('searchIng')}>
+                <TouchableOpacity 
+                    style={styles.search} 
+                    onPress={() => navigate('SearchIng')}
+                    // onPress={() => navigate('MovieDetail', {
+                    //     id: item.value.id,
+                    //     callback: (data) => {
+                    //         alert(data)
+                    //         //this.setState({childState: data})
+                    //     }
+                    // })}
+                    >
                     <Text style={{
                         textAlign: 'center',
                         lineHeight: 25,

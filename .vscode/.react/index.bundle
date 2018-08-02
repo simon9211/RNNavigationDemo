@@ -61645,6 +61645,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
     var _movieDetail2 = _interopRequireDefault(_movieDetail);
 
+    var _searchView = _require(_dependencyMap[10], "./searchView");
+
+    var _searchView2 = _interopRequireDefault(_searchView);
+
     function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61705,7 +61709,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 38
+                            lineNumber: 39
                         }
                     },
                     _react3.default.createElement(
@@ -61716,18 +61720,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 39
+                                lineNumber: 40
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
-                            source: _require(_dependencyMap[10], './resource/react-navigation.png'),
+                            source: _require(_dependencyMap[11], './resource/react-navigation.png'),
                             style: {
                                 width: 30,
                                 height: 30
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 40
+                                lineNumber: 41
                             }
                         }),
                         _react3.default.createElement(
@@ -61741,7 +61745,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 43
+                                    lineNumber: 44
                                 }
                             },
                             "title"
@@ -61756,7 +61760,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
     var MoviesStack = (0, _reactNavigation.createStackNavigator)({
         Movies: _movies2.default,
-        MovieDetail: _movieDetail2.default
+        MovieDetail: _movieDetail2.default,
+        SearchIng: _searchView2.default
     }, {
         initialRouteName: 'Movies',
         navigationOptions: {
@@ -61808,7 +61813,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 104
+                                lineNumber: 106
                             }
                         },
                         routeNameDes
@@ -61821,11 +61826,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                     var iconName = void 0;
 
                     if (routeName === 'Movies') {
-                        iconName = _require(_dependencyMap[11], './resource/tab-movie.png');
+                        iconName = _require(_dependencyMap[12], './resource/tab-movie.png');
                     } else if (routeName === 'FindMovie') {
-                        iconName = _require(_dependencyMap[12], './resource/tab-pic.png');
+                        iconName = _require(_dependencyMap[13], './resource/tab-pic.png');
                     } else if (routeName === 'Mine') {
-                        iconName = _require(_dependencyMap[13], './resource/tab-mine.png');
+                        iconName = _require(_dependencyMap[14], './resource/tab-mine.png');
                     }
 
                     return _react3.default.createElement(_reactNative.Image, {
@@ -61835,7 +61840,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         }],
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 122
+                            lineNumber: 124
                         }
                     });
                 }
@@ -61871,7 +61876,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             height: 24
         }
     });
-},494,[118,130,12,495,602,651,653,670,671,672,673,674,675,676],"src/index.js");
+},494,[118,130,12,495,602,651,653,670,671,672,678,673,674,675,676],"src/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -83221,7 +83226,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         {
                             style: styles.search,
                             onPress: function onPress() {
-                                return navigate('searchIng');
+                                return navigate('SearchIng');
                             },
                             __source: {
                                 fileName: _jsxFileName,
@@ -83238,7 +83243,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 50
+                                    lineNumber: 60
                                 }
                             },
                             "  \u7535\u5F71/\u7535\u89C6\u5267/\u5F71\u4EBA"
@@ -86802,6 +86807,163 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "type": "png"
   });
 },676,[326],"src/resource/tab-mine.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp,
+      _jsxFileName = "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/src/searchView.js";
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  var _reactNavigation = _require(_dependencyMap[3], "react-navigation");
+
+  var _star = _require(_dependencyMap[4], "./common/star");
+
+  var _star2 = _interopRequireDefault(_star);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    SearchMovieScreen: {
+      displayName: "SearchMovieScreen"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/src/searchView.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var _Dimensions$get = _reactNative.Dimensions.get('window'),
+      width = _Dimensions$get.width,
+      height = _Dimensions$get.height;
+
+  var movieInfo = 'https://api.douban.com/v2/movie/subject';
+
+  var SearchMovieScreen = _wrapComponent("SearchMovieScreen")((_temp = _class = function (_React$Component) {
+    _inherits(SearchMovieScreen, _React$Component);
+
+    function SearchMovieScreen() {
+      _classCallCheck(this, SearchMovieScreen);
+
+      return _possibleConstructorReturn(this, (SearchMovieScreen.__proto__ || Object.getPrototypeOf(SearchMovieScreen)).apply(this, arguments));
+    }
+
+    _createClass(SearchMovieScreen, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {}
+    }, {
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 76
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 77
+              }
+            },
+            "hello world"
+          )
+        );
+      }
+    }]);
+
+    return SearchMovieScreen;
+  }(_react3.default.Component), _class.navigationOptions = function (_ref) {
+    var navigation = _ref.navigation;
+    return {
+      header: null,
+      headerRight: _react3.default.createElement(_reactNative.Button, {
+        styles: {
+          fontSize: 12
+        },
+        title: "\u53D6\u6D88",
+        color: "#cf0",
+        onPress: function onPress() {
+          return navigation.goBack();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        }
+      })
+    };
+  }, _temp));
+
+  exports.default = SearchMovieScreen;
+
+  var styles = _reactNative.StyleSheet.create({
+    poster: {
+      backgroundColor: '#2a362c',
+      height: 310,
+      width: width,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    movieInfo: {
+      paddingTop: 15,
+      paddingLeft: 15,
+      paddingRight: 15,
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    },
+    infoSquare: {
+      backgroundColor: '#ffffff',
+      width: 85,
+      height: 85,
+      marginBottom: 15,
+      justifyContent: 'center',
+      alignItems: 'center',
+      shadowColor: '#9b9b9b',
+      shadowOffset: {
+        height: 0,
+        width: 0
+      },
+      shadowRadius: 10,
+      shadowOpacity: 0.5
+    },
+    smallFont: {
+      fontSize: 11,
+      color: '#9b9b9b'
+    }
+  });
+},678,[118,130,12,495,658],"src/searchView.js");
 require(52);
 require(11);
 //# sourceMappingURL=index.map
