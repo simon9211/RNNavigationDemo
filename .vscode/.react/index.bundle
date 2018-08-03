@@ -86865,8 +86865,6 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       width = _Dimensions$get.width,
       height = _Dimensions$get.height;
 
-  var movieInfo = 'https://api.douban.com/v2/movie/subject';
-
   var SearchMovieScreen = _wrapComponent("SearchMovieScreen")((_temp = _class = function (_React$Component) {
     _inherits(SearchMovieScreen, _React$Component);
 
@@ -86880,26 +86878,72 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       key: "componentDidMount",
       value: function componentDidMount() {}
     }, {
+      key: "_navigationPop",
+      value: function _navigationPop() {
+        if (this.props.navigation) {
+          this.props.navigation.goBack();
+        }
+      }
+    }, {
       key: "render",
       value: function render() {
+        var _this2 = this;
+
+        var navigation = this.props.navigation.navigation;
         return _react3.default.createElement(
           _reactNative.View,
           {
+            style: styles.header,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 76
+              lineNumber: 61
             }
           },
           _react3.default.createElement(
-            _reactNative.Text,
+            _reactNative.TouchableOpacity,
             {
+              style: styles.search,
+              onPress: function onPress() {
+                return navigate('SearchIng');
+              },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 77
+                lineNumber: 62
               }
             },
-            "hello world"
-          )
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: {
+                  textAlign: 'center',
+                  lineHeight: 25,
+                  color: '#8B8B8B'
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 66
+                }
+              },
+              "  \u7535\u5F71/\u7535\u89C6\u5267/\u5F71\u4EBA"
+            )
+          ),
+          _react3.default.createElement(_reactNative.Button, {
+            style: {
+              width: 50,
+              height: 20,
+              marginright: 10,
+              fontSize: 12,
+              backgroundColor: '#ff0000'
+            },
+            title: "\u53D6\u6D88",
+            onPress: function onPress() {
+              return _this2.props.navigation.goBack();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 72
+            }
+          })
         );
       }
     }]);
@@ -86908,27 +86952,28 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(_react3.default.Component), _class.navigationOptions = function (_ref) {
     var navigation = _ref.navigation;
     return {
-      header: null,
-      headerRight: _react3.default.createElement(_reactNative.Button, {
-        styles: {
-          fontSize: 12
-        },
-        title: "\u53D6\u6D88",
-        color: "#cf0",
-        onPress: function onPress() {
-          return navigation.goBack();
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        }
-      })
+      header: null
     };
   }, _temp));
 
   exports.default = SearchMovieScreen;
 
   var styles = _reactNative.StyleSheet.create({
+    header: {
+      height: 60,
+      flexDirection: 'row',
+      paddingLeft: 15,
+      paddingRight: 10,
+      paddingTop: 25
+    },
+    search: {
+      backgroundColor: '#F5F5F5',
+      flex: 6,
+      height: 30,
+      borderRadius: 10,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
     poster: {
       backgroundColor: '#2a362c',
       height: 310,

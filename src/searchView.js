@@ -19,7 +19,6 @@ import {
 import { StackNavigator } from 'react-navigation';
 import Star from './common/star';
 const { width, height } = Dimensions.get('window');
-const movieInfo = 'https://api.douban.com/v2/movie/subject';
 
  export default class SearchMovieScreen extends React.Component {
 
@@ -47,40 +46,51 @@ const movieInfo = 'https://api.douban.com/v2/movie/subject';
     });
 
     componentDidMount() {
-    //   const {state:{params:{id}}} = this.props.navigation;
-    //   let formData = new FormData();
-    //   formData.append('apikey', '0b2bdeda43b5688921839c8ecb20399b')
-    //   formData.append('city','北京',)
-    //   formData.append('client','something',)
-    //   formData.append('udid','dddddddddddddddddddddd')
+ 
+    }
 
-    //   fetch(`${movieInfo}/${id}`, {
-    //     method: 'POST',
-    //     headers: {
-    //       'Accept': 'application/json',
-    //       'Content-Type': 'multipart/form-data',
-    //     },
-    //     body:formData
-    //   }).then((Response) => Response.json())
-    //   .then((data) => {
-    //     this.setState({
-    //       ready: false,
-    //       data: data,
-    //     });
-    //   })
+    _navigationPop() {
+        if (this.props.navigation) {
+            this.props.navigation.goBack()
+        }
     }
 
     render() {
-
-        return (
-          <View>
-              <Text>hello world</Text>
+        const {navigation} = this.props.navigation;
+            return (
+          <View style={styles.header}>
+                <TouchableOpacity 
+                    style={styles.search} 
+                    onPress={() => navigate('SearchIng')}
+                    >
+                    <Text style={{
+                        textAlign: 'center',
+                        lineHeight: 25,
+                        color: '#8B8B8B'
+                    }}>  电影/电视剧/影人</Text>
+                </TouchableOpacity>
+                <Button style={{width: 50, height:20, marginright:10, fontSize:12, backgroundColor:'#ff0000'}} title="取消" onPress={()=> this.props.navigation.goBack()}/>
           </View>
         ); 
     }
   }
 
   const styles = StyleSheet.create({
+    header: {
+        height: 60,
+        flexDirection: 'row',
+        paddingLeft: 15,
+        paddingRight: 10,
+        paddingTop: 25,
+    },
+    search: {
+        backgroundColor: '#F5F5F5',
+        flex:6,
+        height:30,
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems:'center',
+    },
     poster:{
       backgroundColor: '#2a362c',
       height: 310,
