@@ -40,7 +40,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
                             Beijing 
                             <Image 
                                 source={ require('./resource/pull.png') }
-                                style={{  width: 10, height: 10}}
+                                style={{marginLeft:5, width: 10, height: 10}}
                             />
                         </Text>
                     </TouchableOpacity>
@@ -57,6 +57,10 @@ import { StackNavigator, TabNavigator } from 'react-navigation';
                     //     }
                     // })}
                     >
+                    <Image 
+                    source={ require('./resource/search.png') }
+                    style={{  width: 20, height: 20}}
+                    />
                     <Text style={{
                         textAlign: 'center',
                         lineHeight: 25,
@@ -87,8 +91,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5F5F5',
         flex:6,
         height:30,
+        marginLeft: 10,
         borderRadius:10,
-        justifyContent:'center',
+        justifyContent:'flex-start',
         alignItems:'center',
+        flexDirection: 'row',
+        marginLeft:10,
     }
 });
