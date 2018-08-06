@@ -67,6 +67,7 @@ const { width, height } = Dimensions.get('window');
                     <TextInput 
                         style={styles.search} 
                         multiline={true}
+                        underlineColorAndroid='transparent'
                         numberOfLines={1}
                         placeholder='i am placeholder'
                         value={this.state.txt}
@@ -95,6 +96,7 @@ const { width, height } = Dimensions.get('window');
         marginLeft:10,
         marginRight:20,
         color: '#8B8B8B',
+        padding:0,
         
     },
     poster:{
