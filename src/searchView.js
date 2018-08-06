@@ -26,7 +26,9 @@ const { width, height } = Dimensions.get('window');
     constructor(props) {
         super(props);
         this.state = {
-            txt: 'i am content!'
+            keywords: '',
+            historySearchs: [],
+            hotSearchs: ['小偷家族', '复仇者联盟3: 无限2战争', '西红柿首富', '灭绝', '死侍2', '我不是药神', '面对邪恶', '血猎', '吸血鬼传说', '纯洁心灵。逐梦演艺圈']
         }
     }
     static navigationOptions = ({ navigation }) => ({
@@ -58,8 +60,9 @@ const { width, height } = Dimensions.get('window');
 
     render() {
         return (
-          <View style={styles.header}>
-                <View style={{backgroundColor: '#F5F5F5', padding:5, height:30, width:300, lineHeight: 25, borderRadius:10, flexDirection:'row', alignItems:'center', flex:1}}>
+          <View style={styles.container}>
+            <View style={styles.header}>
+                <View style={styles.searchBar}>
                      <Image 
                         source={ require('./resource/search.png') }
                         style={{marginLeft:5, width: 20, height: 20}}
@@ -69,65 +72,51 @@ const { width, height } = Dimensions.get('window');
                         multiline={true}
                         underlineColorAndroid='transparent'
                         numberOfLines={1}
-                        placeholder='i am placeholder'
-                        value={this.state.txt}
+                        placeholder='搜索影视'
+                        value={this.state.keywords}
                         onChangeText={(text) => this.setState({txt: text})}
                         />
                 </View>
                 
                 <Button style={{width: 50, height:20, marginright:10, fontSize:12, backgroundColor:'#ff0000'}} title="取消" onPress={()=> this.props.navigation.goBack()}/>
           </View>
+          </View>
         ); 
     }
   }
 
   const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      // backgroundColor: '#F5FCFF',
+    },
     header: {
         height: 60,
         flexDirection: 'row',
         paddingLeft: 15,
         paddingRight: 10,
         paddingTop: 25,
-        // backgroundColor:'red',
+    },
+    searchBar: {
+      backgroundColor: '#F5F5F5', 
+      padding:5, 
+      height:30, 
+      width:300, 
+      lineHeight: 25, 
+      borderRadius:10, 
+      flexDirection:'row', 
+      alignItems:'center', 
+      flex:1,
     },
     search: {
         flex: 1,
-        height:30,
+        // height:30,
         marginLeft:10,
         marginRight:20,
         color: '#8B8B8B',
-        padding:0,
-        
+        padding:0, // 适配Android输入框
     },
-    poster:{
-      backgroundColor: '#2a362c',
-      height: 310,
-      width: width,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    movieInfo:{
-      paddingTop: 15,
-      paddingLeft: 15,
-      paddingRight: 15,
-      flexDirection: 'row',
-      // alignItems:'center',
-      justifyContent:'space-between',
-    },
-    infoSquare:{
-      backgroundColor: '#ffffff',
-      width:85,
-      height:85,
-      marginBottom: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-      shadowColor: '#9b9b9b',
-      shadowOffset:{height:0,width:0},
-      shadowRadius: 10,
-      shadowOpacity: 0.5,
-    },
-    smallFont:{
-      fontSize:11,
-      color:'#9b9b9b',
-    }
+  
   });
