@@ -61876,7 +61876,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             height: 24
         }
     });
-},494,[118,130,12,495,602,651,653,670,671,672,678,673,674,675,676],"src/index.js");
+},494,[118,130,12,495,602,651,653,671,672,673,674,675,676,677,678],"src/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -83100,7 +83100,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }, _temp));
 
     exports.default = MoviesScreen;
-},653,[118,130,12,654,656,662,664],"src/movies.js");
+},653,[118,130,12,654,657,663,665],"src/movies.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -83298,7 +83298,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             marginLeft: 10
         }
     });
-},654,[118,130,12,651,495,655,679],"src/searchInput.js");
+},654,[118,130,12,651,495,655,656],"src/searchInput.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
    module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
       "__packager_asset": true,
@@ -83311,6 +83311,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       "type": "png"
    });
 },655,[326],"src/resource/pull.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 32,
+    "height": 32,
+    "scales": [1],
+    "hash": "3d5e0496ec856c6d5fcf826a90a80d72",
+    "name": "search",
+    "type": "png"
+  });
+},656,[326],"src/resource/search.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -83647,7 +83659,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             marginBottom: 10
         }
     });
-},656,[118,130,12,657],"src/hotList.js");
+},657,[118,130,12,658],"src/hotList.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -83969,7 +83981,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             borderRadius: 5
         }
     });
-},657,[118,130,12,658],"src/common/hotMovieCell.js");
+},658,[118,130,12,659],"src/common/hotMovieCell.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -84140,7 +84152,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             marginRight: 2
         }
     });
-},658,[118,130,12,659,660,661],"src/common/star.js");
+},659,[118,130,12,660,661,662],"src/common/star.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -84152,7 +84164,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "star-full",
     "type": "png"
   });
-},659,[326],"src/resource/star-full.png");
+},660,[326],"src/resource/star-full.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -84164,7 +84176,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "star-half",
     "type": "png"
   });
-},660,[326],"src/resource/star-half.png");
+},661,[326],"src/resource/star-half.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -84176,7 +84188,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "star-empty",
     "type": "png"
   });
-},661,[326],"src/resource/star-empty.png");
+},662,[326],"src/resource/star-empty.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -84356,7 +84368,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             marginRight: 2
         }
     });
-},662,[118,130,12,663],"src/soonList.js");
+},663,[118,130,12,664],"src/soonList.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -84616,7 +84628,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             borderRadius: 5
         }
     });
-},663,[118,130,12],"src/common/soonMovieCell.js");
+},664,[118,130,12],"src/common/soonMovieCell.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -85132,7 +85144,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       flex: 1
     }
   });
-},664,[118,12,330,294,392,665,667,669],"node_modules/react-native-scrollable-tab-view/index.js");
+},665,[118,12,330,294,392,666,668,670],"node_modules/react-native-scrollable-tab-view/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -85177,7 +85189,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   module.exports = SceneComponent;
-},665,[118,12,666],"node_modules/react-native-scrollable-tab-view/SceneComponent.js");
+},666,[118,12,667],"node_modules/react-native-scrollable-tab-view/SceneComponent.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _react2 = _require(_dependencyMap[0], "react");
 
@@ -85249,7 +85261,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(React.Component));
 
   module.exports = StaticContainer;
-},666,[118,130],"node_modules/react-native-scrollable-tab-view/StaticContainer.js");
+},667,[118,130],"node_modules/react-native-scrollable-tab-view/StaticContainer.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _jsxFileName = "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/node_modules/react-native-scrollable-tab-view/DefaultTabBar.js";
 
@@ -85408,7 +85420,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }
   });
   module.exports = DefaultTabBar;
-},667,[118,12,294,330,668],"node_modules/react-native-scrollable-tab-view/DefaultTabBar.js");
+},668,[118,12,294,330,669],"node_modules/react-native-scrollable-tab-view/DefaultTabBar.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -85435,7 +85447,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   };
 
   module.exports = Button;
-},668,[118,12],"node_modules/react-native-scrollable-tab-view/Button.ios.js");
+},669,[118,12],"node_modules/react-native-scrollable-tab-view/Button.ios.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   var _jsxFileName = "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/node_modules/react-native-scrollable-tab-view/ScrollableTabBar.js";
 
@@ -85752,7 +85764,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       justifyContent: 'space-around'
     }
   });
-},669,[118,12,294,330,668],"node_modules/react-native-scrollable-tab-view/ScrollableTabBar.js");
+},670,[118,12,294,330,669],"node_modules/react-native-scrollable-tab-view/ScrollableTabBar.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -85864,7 +85876,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     }(_react3.default.Component));
 
     exports.default = FindMovieScreen;
-},670,[118,130,12],"src/findMovie.js");
+},671,[118,130,12],"src/findMovie.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -85954,7 +85966,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   }(_react3.default.Component));
 
   exports.default = MineScreen;
-},671,[118,130,12],"src/mine.js");
+},672,[118,130,12],"src/mine.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -86773,55 +86785,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       color: '#9b9b9b'
     }
   });
-},672,[118,130,12,495,658],"src/movieDetail.js");
-__d(function (global, _require, module, exports, _dependencyMap) {
-	module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-		"__packager_asset": true,
-		"httpServerLocation": "/assets/src/resource",
-		"width": 256,
-		"height": 230,
-		"scales": [1],
-		"hash": "b2d4e5f0f7b6d2c5e193a6ebf3b288a7",
-		"name": "react-navigation",
-		"type": "png"
-	});
-},673,[326],"src/resource/react-navigation.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-    "__packager_asset": true,
-    "httpServerLocation": "/assets/src/resource",
-    "width": 64,
-    "height": 64,
-    "scales": [1],
-    "hash": "700d9b53a10eb2072817a3c90f412c3f",
-    "name": "tab-movie",
-    "type": "png"
-  });
-},674,[326],"src/resource/tab-movie.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-    "__packager_asset": true,
-    "httpServerLocation": "/assets/src/resource",
-    "width": 64,
-    "height": 64,
-    "scales": [1],
-    "hash": "fc5f39fc71eabba2557dab7d8d041383",
-    "name": "tab-pic",
-    "type": "png"
-  });
-},675,[326],"src/resource/tab-pic.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
-    "__packager_asset": true,
-    "httpServerLocation": "/assets/src/resource",
-    "width": 64,
-    "height": 64,
-    "scales": [1],
-    "hash": "727d2d40096165905c820ad28c1444fe",
-    "name": "tab-mine",
-    "type": "png"
-  });
-},676,[326],"src/resource/tab-mine.png");
+},673,[118,130,12,495,659],"src/movieDetail.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -86844,10 +86808,6 @@ __d(function (global, _require, module, exports, _dependencyMap) {
   var _reactNative = _require(_dependencyMap[2], "react-native");
 
   var _reactNavigation = _require(_dependencyMap[3], "react-navigation");
-
-  var _reactNativeSearchBox = _require(_dependencyMap[4], "react-native-search-box");
-
-  var _reactNativeSearchBox2 = _interopRequireDefault(_reactNativeSearchBox);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -86908,7 +86868,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             style: styles.header,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 61
             }
           },
           _react3.default.createElement(
@@ -86927,11 +86887,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 63
+                lineNumber: 62
               }
             },
             _react3.default.createElement(_reactNative.Image, {
-              source: _require(_dependencyMap[5], './resource/search.png'),
+              source: _require(_dependencyMap[4], './resource/search.png'),
               style: {
                 marginLeft: 5,
                 width: 20,
@@ -86939,7 +86899,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 63
               }
             }),
             _react3.default.createElement(_reactNative.TextInput, {
@@ -86955,7 +86915,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 68
+                lineNumber: 67
               }
             })
           ),
@@ -86973,7 +86933,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 78
+              lineNumber: 77
             }
           })
         );
@@ -87039,822 +86999,55 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       color: '#9b9b9b'
     }
   });
-},678,[118,130,12,495,680,679],"src/searchView.js");
+},674,[118,130,12,495,656],"src/searchView.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+	module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/src/resource",
+		"width": 256,
+		"height": 230,
+		"scales": [1],
+		"hash": "b2d4e5f0f7b6d2c5e193a6ebf3b288a7",
+		"name": "react-navigation",
+		"type": "png"
+	});
+},675,[326],"src/resource/react-navigation.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
     "httpServerLocation": "/assets/src/resource",
-    "width": 32,
-    "height": 32,
+    "width": 64,
+    "height": 64,
     "scales": [1],
-    "hash": "3d5e0496ec856c6d5fcf826a90a80d72",
-    "name": "search",
+    "hash": "700d9b53a10eb2072817a3c90f412c3f",
+    "name": "tab-movie",
     "type": "png"
   });
-},679,[326],"src/resource/search.png");
-__d(function (global, _require, module, exports, _dependencyMap) {
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-
-  var _react2 = _require(_dependencyMap[0], "react");
-
-  var _react3 = _interopRequireDefault(_react2);
-
-  var _index = _require(_dependencyMap[1], "./../react-transform-hmr/lib/index.js");
-
-  var _index2 = _interopRequireDefault(_index);
-
-  var _jsxFileName = "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/node_modules/react-native-search-box/index.js";
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _propTypes = _require(_dependencyMap[2], "prop-types");
-
-  var _propTypes2 = _interopRequireDefault(_propTypes);
-
-  var _reactNative = _require(_dependencyMap[3], "react-native");
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _components = {
-    Search: {
-      displayName: "Search"
-    }
-  };
-
-  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/node_modules/react-native-search-box/index.js",
-    components: _components,
-    locals: [module],
-    imports: [_react3.default]
-  });
-
-  function _wrapComponent(id) {
-    return function (Component) {
-      return _reactTransformHmrLibIndexJs2(Component, id);
-    };
-  }
-
-  var AnimatedTextInput = _reactNative.Animated.createAnimatedComponent(_reactNative.TextInput);
-
-  var containerHeight = 40;
-
-  var Search = _wrapComponent("Search")(function (_PureComponent) {
-    _inherits(Search, _PureComponent);
-
-    function Search(props) {
-      var _this2 = this;
-
-      _classCallCheck(this, Search);
-
-      var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
-
-      _this.onLayout = function (event) {
-        var contentWidth = event.nativeEvent.layout.width;
-        _this.contentWidth = contentWidth;
-        _this.middleWidth = contentWidth / 2;
-
-        if (_this.state.expanded) {
-          _this.expandAnimation();
-        } else {
-          _this.collapseAnimation();
-        }
-      };
-
-      _this.onSearch = function _callee() {
-        return regeneratorRuntime.async(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.t0 = _this.props.beforeSearch;
-
-                if (!_context.t0) {
-                  _context.next = 4;
-                  break;
-                }
-
-                _context.next = 4;
-                return regeneratorRuntime.awrap(_this.props.beforeSearch(_this.state.keyword));
-
-              case 4:
-                if (!(_this.props.keyboardShouldPersist === false)) {
-                  _context.next = 7;
-                  break;
-                }
-
-                _context.next = 7;
-                return regeneratorRuntime.awrap(_reactNative.Keyboard.dismiss());
-
-              case 7:
-                _context.t1 = _this.props.onSearch;
-
-                if (!_context.t1) {
-                  _context.next = 11;
-                  break;
-                }
-
-                _context.next = 11;
-                return regeneratorRuntime.awrap(_this.props.onSearch(_this.state.keyword));
-
-              case 11:
-                _context.t2 = _this.props.afterSearch;
-
-                if (!_context.t2) {
-                  _context.next = 15;
-                  break;
-                }
-
-                _context.next = 15;
-                return regeneratorRuntime.awrap(_this.props.afterSearch(_this.state.keyword));
-
-              case 15:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.onChangeText = function _callee2(text) {
-        return regeneratorRuntime.async(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.next = 2;
-                return regeneratorRuntime.awrap(_this.setState({
-                  keyword: text
-                }));
-
-              case 2:
-                _context2.next = 4;
-                return regeneratorRuntime.awrap(new Promise(function (resolve, reject) {
-                  _reactNative.Animated.timing(_this.iconDeleteAnimated, {
-                    toValue: text.length > 0 ? 1 : 0,
-                    duration: 200
-                  }).start(function () {
-                    return resolve();
-                  });
-                }));
-
-              case 4:
-                _context2.t0 = _this.props.onChangeText;
-
-                if (!_context2.t0) {
-                  _context2.next = 8;
-                  break;
-                }
-
-                _context2.next = 8;
-                return regeneratorRuntime.awrap(_this.props.onChangeText(_this.state.keyword));
-
-              case 8:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.onFocus = function _callee3() {
-        return regeneratorRuntime.async(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                _context3.t0 = _this.props.beforeFocus;
-
-                if (!_context3.t0) {
-                  _context3.next = 4;
-                  break;
-                }
-
-                _context3.next = 4;
-                return regeneratorRuntime.awrap(_this.props.beforeFocus());
-
-              case 4:
-                _context3.t1 = _this.refs.input_keyword._component.isFocused;
-
-                if (!_context3.t1) {
-                  _context3.next = 8;
-                  break;
-                }
-
-                _context3.next = 8;
-                return regeneratorRuntime.awrap(_this.refs.input_keyword._component.focus());
-
-              case 8:
-                _context3.next = 10;
-                return regeneratorRuntime.awrap(_this.setState(function (prevState) {
-                  return {
-                    expanded: !prevState.expanded
-                  };
-                }));
-
-              case 10:
-                _context3.next = 12;
-                return regeneratorRuntime.awrap(_this.expandAnimation());
-
-              case 12:
-                _context3.t2 = _this.props.onFocus;
-
-                if (!_context3.t2) {
-                  _context3.next = 16;
-                  break;
-                }
-
-                _context3.next = 16;
-                return regeneratorRuntime.awrap(_this.props.onFocus(_this.state.keyword));
-
-              case 16:
-                _context3.t3 = _this.props.afterFocus;
-
-                if (!_context3.t3) {
-                  _context3.next = 20;
-                  break;
-                }
-
-                _context3.next = 20;
-                return regeneratorRuntime.awrap(_this.props.afterFocus());
-
-              case 20:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.focus = function _callee4() {
-        var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-        return regeneratorRuntime.async(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                _context4.next = 2;
-                return regeneratorRuntime.awrap(_this.setState({
-                  keyword: text
-                }));
-
-              case 2:
-                _context4.next = 4;
-                return regeneratorRuntime.awrap(_this.refs.input_keyword._component.focus());
-
-              case 4:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.onDelete = function _callee5() {
-        return regeneratorRuntime.async(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                _context5.t0 = _this.props.beforeDelete;
-
-                if (!_context5.t0) {
-                  _context5.next = 4;
-                  break;
-                }
-
-                _context5.next = 4;
-                return regeneratorRuntime.awrap(_this.props.beforeDelete());
-
-              case 4:
-                _context5.next = 6;
-                return regeneratorRuntime.awrap(new Promise(function (resolve, reject) {
-                  _reactNative.Animated.timing(_this.iconDeleteAnimated, {
-                    toValue: 0,
-                    duration: 200
-                  }).start(function () {
-                    return resolve();
-                  });
-                }));
-
-              case 6:
-                _context5.next = 8;
-                return regeneratorRuntime.awrap(_this.setState({
-                  keyword: ''
-                }));
-
-              case 8:
-                _context5.t1 = _this.props.onDelete;
-
-                if (!_context5.t1) {
-                  _context5.next = 12;
-                  break;
-                }
-
-                _context5.next = 12;
-                return regeneratorRuntime.awrap(_this.props.onDelete());
-
-              case 12:
-                _context5.t2 = _this.props.afterDelete;
-
-                if (!_context5.t2) {
-                  _context5.next = 16;
-                  break;
-                }
-
-                _context5.next = 16;
-                return regeneratorRuntime.awrap(_this.props.afterDelete());
-
-              case 16:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.onCancel = function _callee6() {
-        return regeneratorRuntime.async(function _callee6$(_context6) {
-          while (1) {
-            switch (_context6.prev = _context6.next) {
-              case 0:
-                _context6.t0 = _this.props.beforeCancel;
-
-                if (!_context6.t0) {
-                  _context6.next = 4;
-                  break;
-                }
-
-                _context6.next = 4;
-                return regeneratorRuntime.awrap(_this.props.beforeCancel());
-
-              case 4:
-                _context6.next = 6;
-                return regeneratorRuntime.awrap(_this.setState({
-                  keyword: ''
-                }));
-
-              case 6:
-                _context6.next = 8;
-                return regeneratorRuntime.awrap(_this.setState(function (prevState) {
-                  return {
-                    expanded: !prevState.expanded
-                  };
-                }));
-
-              case 8:
-                _context6.next = 10;
-                return regeneratorRuntime.awrap(_this.collapseAnimation(true));
-
-              case 10:
-                _context6.t1 = _this.props.onCancel;
-
-                if (!_context6.t1) {
-                  _context6.next = 14;
-                  break;
-                }
-
-                _context6.next = 14;
-                return regeneratorRuntime.awrap(_this.props.onCancel());
-
-              case 14:
-                _context6.t2 = _this.props.afterCancel;
-
-                if (!_context6.t2) {
-                  _context6.next = 18;
-                  break;
-                }
-
-                _context6.next = 18;
-                return regeneratorRuntime.awrap(_this.props.afterCancel());
-
-              case 18:
-              case "end":
-                return _context6.stop();
-            }
-          }
-        }, null, _this2);
-      };
-
-      _this.expandAnimation = function () {
-        return new Promise(function (resolve, reject) {
-          _reactNative.Animated.parallel([_reactNative.Animated.timing(_this.inputFocusWidthAnimated, {
-            toValue: _this.contentWidth - _this.cancelButtonWidth,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.btnCancelAnimated, {
-            toValue: 10,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.inputFocusPlaceholderAnimated, {
-            toValue: _this.props.placeholderExpandedMargin,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.iconSearchAnimated, {
-            toValue: _this.props.searchIconExpandedMargin,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.iconDeleteAnimated, {
-            toValue: _this.state.keyword.length > 0 ? 1 : 0,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.shadowOpacityAnimated, {
-            toValue: _this.props.shadowOpacityExpanded,
-            duration: 200
-          }).start()]);
-
-          _this.shadowHeight = _this.props.shadowOffsetHeightExpanded;
-          resolve();
-        });
-      };
-
-      _this.collapseAnimation = function () {
-        var isForceAnim = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-        return new Promise(function (resolve, reject) {
-          _reactNative.Animated.parallel([_this.props.keyboardShouldPersist === false ? _reactNative.Keyboard.dismiss() : null, _reactNative.Animated.timing(_this.inputFocusWidthAnimated, {
-            toValue: _this.contentWidth - 10,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.btnCancelAnimated, {
-            toValue: _this.contentWidth,
-            duration: 200
-          }).start(), _this.props.keyboardShouldPersist === false ? _reactNative.Animated.timing(_this.inputFocusPlaceholderAnimated, {
-            toValue: _this.middleWidth - _this.props.placeholderCollapsedMargin,
-            duration: 200
-          }).start() : null, _this.props.keyboardShouldPersist === false || isForceAnim === true ? _reactNative.Animated.timing(_this.iconSearchAnimated, {
-            toValue: _this.middleWidth - _this.props.searchIconCollapsedMargin,
-            duration: 200
-          }).start() : null, _reactNative.Animated.timing(_this.iconDeleteAnimated, {
-            toValue: 0,
-            duration: 200
-          }).start(), _reactNative.Animated.timing(_this.shadowOpacityAnimated, {
-            toValue: _this.props.shadowOpacityCollapsed,
-            duration: 200
-          }).start()]);
-
-          _this.shadowHeight = _this.props.shadowOffsetHeightCollapsed;
-          resolve();
-        });
-      };
-
-      _this.state = {
-        keyword: props.defaultValue,
-        expanded: false
-      };
-
-      var _Dimensions$get = _reactNative.Dimensions.get('window'),
-          width = _Dimensions$get.width;
-
-      _this.contentWidth = width;
-      _this.middleWidth = width / 2;
-      _this.cancelButtonWidth = _this.props.cancelButtonWidth || 70;
-      _this.iconSearchAnimated = new _reactNative.Animated.Value(_this.middleWidth - _this.props.searchIconCollapsedMargin);
-      _this.iconDeleteAnimated = new _reactNative.Animated.Value(0);
-      _this.inputFocusWidthAnimated = new _reactNative.Animated.Value(_this.contentWidth - 10);
-      _this.inputFocusPlaceholderAnimated = new _reactNative.Animated.Value(_this.middleWidth - _this.props.placeholderCollapsedMargin);
-      _this.btnCancelAnimated = new _reactNative.Animated.Value(_this.contentWidth);
-      _this.onFocus = _this.onFocus.bind(_this);
-      _this.onSearch = _this.onSearch.bind(_this);
-      _this.onChangeText = _this.onChangeText.bind(_this);
-      _this.onCancel = _this.onCancel.bind(_this);
-      _this.onDelete = _this.onDelete.bind(_this);
-      _this.focus = _this.focus.bind(_this);
-      _this.expandAnimation = _this.expandAnimation.bind(_this);
-      _this.collapseAnimation = _this.collapseAnimation.bind(_this);
-      _this.onLayout = _this.onLayout.bind(_this);
-      _this.placeholder = _this.props.placeholder || 'Search';
-      _this.cancelTitle = _this.props.cancelTitle || 'Cancel';
-      _this.autoFocus = _this.props.autoFocus || false;
-      _this.shadowOpacityAnimated = new _reactNative.Animated.Value(_this.props.shadowOpacityCollapsed);
-      _this.shadowHeight = _this.props.shadowOffsetHeightCollapsed;
-      return _this;
-    }
-
-    _createClass(Search, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        if (this.autoFocus) {
-          this.setState({
-            expanded: true
-          });
-
-          this.refs.input_keyword._component.focus();
-        }
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var isRtl = this.props.direction === 'rtl';
-        var styles = getStyles(this.props.inputHeight, isRtl);
-        return _react3.default.createElement(
-          _reactNative.Animated.View,
-          {
-            ref: "searchContainer",
-            style: [styles.container, this.props.backgroundColor && {
-              backgroundColor: this.props.backgroundColor
-            }],
-            onLayout: this.onLayout,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 256
-            }
-          },
-          _react3.default.createElement(AnimatedTextInput, {
-            ref: "input_keyword",
-            style: [styles.input, this.props.placeholderTextColor && {
-              color: this.props.placeholderTextColor
-            }, this.props.inputStyle && this.props.inputStyle, this.props.inputHeight && {
-              height: this.props.inputHeight
-            }, this.props.inputBorderRadius && {
-              borderRadius: this.props.inputBorderRadius
-            }, _defineProperty({
-              width: this.inputFocusWidthAnimated
-            }, isRtl ? 'paddingRight' : 'paddingLeft', this.inputFocusPlaceholderAnimated), this.props.shadowVisible && {
-              shadowOffset: {
-                width: this.props.shadowOffsetWidth,
-                height: this.shadowHeight
-              },
-              shadowColor: this.props.shadowColor,
-              shadowOpacity: this.shadowOpacityAnimated,
-              shadowRadius: this.props.shadowRadius
-            }],
-            editable: this.props.editable,
-            value: this.state.keyword,
-            onChangeText: this.onChangeText,
-            placeholder: this.placeholder,
-            placeholderTextColor: this.props.placeholderTextColor || styles.placeholderColor,
-            selectionColor: this.props.selectionColor,
-            onSubmitEditing: this.onSearch,
-            autoCorrect: false,
-            blurOnSubmit: this.props.blurOnSubmit,
-            returnKeyType: this.props.returnKeyType || 'search',
-            keyboardType: this.props.keyboardType || 'default',
-            autoCapitalize: this.props.autoCapitalize,
-            onFocus: this.onFocus,
-            underlineColorAndroid: "transparent",
-            accessibilityTraits: "search",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 266
-            }
-          }),
-          _react3.default.createElement(
-            _reactNative.TouchableWithoutFeedback,
-            {
-              onPress: this.onFocus,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 310
-              }
-            },
-            this.props.iconSearch ? _react3.default.createElement(
-              _reactNative.Animated.View,
-              {
-                style: [styles.iconSearch, {
-                  left: this.iconSearchAnimated
-                }],
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 312
-                }
-              },
-              this.props.iconSearch
-            ) : _react3.default.createElement(_reactNative.Animated.Image, {
-              source: _require(_dependencyMap[4], './img/search.png'),
-              style: [styles.iconSearch, styles.iconSearchDefault, this.props.tintColorSearch && {
-                tintColor: this.props.tintColorSearch
-              }, {
-                left: this.iconSearchAnimated
-              }],
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 317
-              }
-            })
-          ),
-          this.props.useClearButton && _react3.default.createElement(
-            _reactNative.TouchableWithoutFeedback,
-            {
-              onPress: this.onDelete,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 331
-              }
-            },
-            this.props.iconDelete ? _react3.default.createElement(
-              _reactNative.Animated.View,
-              {
-                style: [styles.iconDelete, this.props.positionRightDelete && _defineProperty({}, isRtl ? 'left' : 'right', this.props.positionRightDelete), {
-                  opacity: this.iconDeleteAnimated
-                }],
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 333
-                }
-              },
-              this.props.iconDelete
-            ) : _react3.default.createElement(_reactNative.Animated.Image, {
-              source: _require(_dependencyMap[5], './img/delete.png'),
-              style: [styles.iconDelete, styles.iconDeleteDefault, this.props.tintColorDelete && {
-                tintColor: this.props.tintColorDelete
-              }, this.props.positionRightDelete && _defineProperty({}, isRtl ? 'left' : 'right', this.props.positionRightDelete), {
-                opacity: this.iconDeleteAnimated
-              }],
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 344
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _reactNative.TouchableOpacity,
-            {
-              onPress: this.onCancel,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 360
-              }
-            },
-            _react3.default.createElement(
-              _reactNative.Animated.View,
-              {
-                style: [styles.cancelButton, this.props.cancelButtonStyle && this.props.cancelButtonStyle, this.props.cancelButtonViewStyle && this.props.cancelButtonViewStyle, _defineProperty({}, isRtl ? 'right' : 'left', this.btnCancelAnimated)],
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 361
-                }
-              },
-              _react3.default.createElement(
-                _reactNative.Text,
-                {
-                  style: [styles.cancelButtonText, this.props.titleCancelColor && {
-                    color: this.props.titleCancelColor
-                  }, this.props.cancelButtonStyle && this.props.cancelButtonStyle, this.props.cancelButtonTextStyle && this.props.cancelButtonTextStyle],
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 369
-                  }
-                },
-                this.cancelTitle
-              )
-            )
-          )
-        );
-      }
-    }]);
-
-    return Search;
-  }(_react2.PureComponent));
-
-  var getStyles = function getStyles(inputHeight, isRtl) {
-    var _input, _iconDelete;
-
-    var middleHeight = 20;
-    if (typeof inputHeight == 'number') middleHeight = (10 + inputHeight) / 2;
-    return {
-      container: {
-        backgroundColor: 'grey',
-        height: containerHeight,
-        flexDirection: isRtl ? 'row-reverse' : 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        padding: 5
-      },
-      input: (_input = {
-        height: containerHeight - 10,
-        paddingTop: 5,
-        paddingBottom: 5
-      }, _defineProperty(_input, isRtl ? 'paddingRight' : 'paddingLeft', 20), _defineProperty(_input, "textAlign", isRtl ? 'right' : 'left'), _defineProperty(_input, "borderColor", '#444'), _defineProperty(_input, "backgroundColor", '#f7f7f7'), _defineProperty(_input, "borderRadius", 5), _defineProperty(_input, "fontSize", 13), _input),
-      placeholderColor: 'grey',
-      iconSearch: {
-        flex: 1,
-        position: 'absolute',
-        top: middleHeight - 7,
-        height: 14,
-        width: 14
-      },
-      iconSearchDefault: {
-        tintColor: 'grey'
-      },
-      iconDelete: (_iconDelete = {
-        position: 'absolute'
-      }, _defineProperty(_iconDelete, isRtl ? 'left' : 'right', 70), _defineProperty(_iconDelete, "top", middleHeight - 7), _defineProperty(_iconDelete, "height", 14), _defineProperty(_iconDelete, "width", 14), _iconDelete),
-      iconDeleteDefault: {
-        tintColor: 'grey'
-      },
-      cancelButton: {
-        justifyContent: 'center',
-        alignItems: isRtl ? 'flex-end' : 'flex-start',
-        backgroundColor: 'transparent',
-        width: 60,
-        height: 50
-      },
-      cancelButtonText: {
-        fontSize: 14,
-        color: '#fff'
-      }
-    };
-  };
-
-  Search.propTypes = {
-    beforeFocus: _propTypes2.default.func,
-    onFocus: _propTypes2.default.func,
-    afterFocus: _propTypes2.default.func,
-    beforeSearch: _propTypes2.default.func,
-    onSearch: _propTypes2.default.func,
-    afterSearch: _propTypes2.default.func,
-    onChangeText: _propTypes2.default.func,
-    beforeCancel: _propTypes2.default.func,
-    onCancel: _propTypes2.default.func,
-    afterCancel: _propTypes2.default.func,
-    beforeDelete: _propTypes2.default.func,
-    onDelete: _propTypes2.default.func,
-    afterDelete: _propTypes2.default.func,
-    backgroundColor: _propTypes2.default.string,
-    placeholderTextColor: _propTypes2.default.string,
-    titleCancelColor: _propTypes2.default.string,
-    tintColorSearch: _propTypes2.default.string,
-    tintColorDelete: _propTypes2.default.string,
-    inputStyle: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.object, _reactNative.ViewPropTypes.style, _reactNative.Text.propTypes.style]),
-    direction: _propTypes2.default.oneOf(['ltr', 'rtl']),
-    cancelButtonStyle: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.object, _reactNative.ViewPropTypes.style, _reactNative.Text.propTypes.style]),
-    onLayout: _propTypes2.default.func,
-    cancelButtonTextStyle: _reactNative.Text.propTypes.style,
-    cancelButtonViewStyle: _propTypes2.default.oneOfType([_propTypes2.default.object, _reactNative.ViewPropTypes.style]),
-    defaultValue: _propTypes2.default.string,
-    placeholder: _propTypes2.default.string,
-    cancelTitle: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
-    iconDelete: _propTypes2.default.object,
-    iconSearch: _propTypes2.default.object,
-    returnKeyType: _propTypes2.default.string,
-    keyboardType: _propTypes2.default.string,
-    autoCapitalize: _propTypes2.default.string,
-    inputHeight: _propTypes2.default.number,
-    inputBorderRadius: _propTypes2.default.number,
-    contentWidth: _propTypes2.default.number,
-    middleWidth: _propTypes2.default.number,
-    editable: _propTypes2.default.bool,
-    blurOnSubmit: _propTypes2.default.bool,
-    keyboardShouldPersist: _propTypes2.default.bool,
-    useClearButton: _propTypes2.default.bool,
-    positionRightDelete: _propTypes2.default.number,
-    searchIconCollapsedMargin: _propTypes2.default.number,
-    searchIconExpandedMargin: _propTypes2.default.number,
-    placeholderCollapsedMargin: _propTypes2.default.number,
-    placeholderExpandedMargin: _propTypes2.default.number,
-    shadowOffsetHeightCollapsed: _propTypes2.default.number,
-    shadowOffsetHeightExpanded: _propTypes2.default.number,
-    shadowOffsetWidth: _propTypes2.default.number,
-    shadowColor: _propTypes2.default.string,
-    shadowOpacityCollapsed: _propTypes2.default.number,
-    shadowOpacityExpanded: _propTypes2.default.number,
-    shadowRadius: _propTypes2.default.number,
-    shadowVisible: _propTypes2.default.bool
-  };
-  Search.defaultProps = {
-    defaultValue: '',
-    editable: true,
-    blurOnSubmit: true,
-    keyboardShouldPersist: false,
-    searchIconCollapsedMargin: 25,
-    searchIconExpandedMargin: 10,
-    placeholderCollapsedMargin: 15,
-    placeholderExpandedMargin: 20,
-    shadowOffsetWidth: 0,
-    shadowOffsetHeightCollapsed: 2,
-    shadowOffsetHeightExpanded: 4,
-    shadowColor: '#000',
-    shadowOpacityCollapsed: 0.12,
-    shadowOpacityExpanded: 0.24,
-    shadowRadius: 4,
-    shadowVisible: false,
-    useClearButton: true,
-    direction: 'ltr'
-  };
-  exports.default = Search;
-},680,[118,130,294,12,681,682],"node_modules/react-native-search-box/index.js");
+},676,[326],"src/resource/tab-movie.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
-    "httpServerLocation": "/assets/node_modules/react-native-search-box/img",
-    "width": 32,
-    "height": 32,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 64,
+    "height": 64,
     "scales": [1],
-    "hash": "cdb9001b59d9c853fbfe680100c78ee5",
-    "name": "search",
+    "hash": "fc5f39fc71eabba2557dab7d8d041383",
+    "name": "tab-pic",
     "type": "png"
   });
-},681,[326],"node_modules/react-native-search-box/img/search.png");
+},677,[326],"src/resource/tab-pic.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
-    "httpServerLocation": "/assets/node_modules/react-native-search-box/img",
-    "width": 32,
-    "height": 32,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 64,
+    "height": 64,
     "scales": [1],
-    "hash": "207bf246a059fd18a2d30299b3d33bb4",
-    "name": "delete",
+    "hash": "727d2d40096165905c820ad28c1444fe",
+    "name": "tab-mine",
     "type": "png"
   });
-},682,[326],"node_modules/react-native-search-box/img/delete.png");
+},678,[326],"src/resource/tab-mine.png");
 require(52);
 require(11);
 //# sourceMappingURL=index.map

@@ -18,7 +18,6 @@ import {
   TextInput
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import Search from 'react-native-search-box'
 
 const { width, height } = Dimensions.get('window');
 
