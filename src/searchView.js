@@ -15,9 +15,12 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
-  TextInput
+  TextInput,
+  FlatList
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+
+import HotSearchCell from './common/hotSearchCell';
 
 const { width, height } = Dimensions.get('window');
 
@@ -28,7 +31,7 @@ const { width, height } = Dimensions.get('window');
         this.state = {
             keywords: '',
             historySearchs: [],
-            hotSearchs: ['小偷家族', '复仇者联盟3: 无限2战争', '西红柿首富', '灭绝', '死侍2', '我不是药神', '面对邪恶', '血猎', '吸血鬼传说', '纯洁心灵。逐梦演艺圈']
+            hotSearchs: [{name:'小偷家族',id:26985127}, {name:'复仇者联盟3: 无限2战争',id:26985127}, {name:'西红柿首富',id:26985127}, {name:'灭绝',id:26985127}, {name:'死侍2',id:26985127}, {name:'我不是药神',id:26985127}, {name:'面对邪恶',id:26985127}, {name:'血猎',id:26985127}, {name:'吸血鬼传说',id:26985127}, {name:'纯洁心灵。逐梦演艺圈',id:26985127}]
         }
     }
     static navigationOptions = ({ navigation }) => ({
@@ -59,6 +62,7 @@ const { width, height } = Dimensions.get('window');
     }
 
     render() {
+      const {hotSearchs} = this.state;
         return (
           <View style={styles.container}>
             <View style={styles.header}>
@@ -79,7 +83,16 @@ const { width, height } = Dimensions.get('window');
                 </View>
                 
                 <Button style={{width: 50, height:20, marginright:10, fontSize:12, backgroundColor:'#ff0000'}} title="取消" onPress={()=> this.props.navigation.goBack()}/>
-          </View>
+            </View>
+            {
+              hotSearchs.length > 0 && <FlatList 
+              data={hotSearchs}
+              key={hotSearchs.key}
+              renderItem={(item) => {
+                  return <HotSearchCell item={item} navigation={this.props.navigation}/>
+              }}
+              />
+            }
           </View>
         ); 
     }

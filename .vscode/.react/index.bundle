@@ -61876,7 +61876,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             height: 24
         }
     });
-},494,[118,130,12,495,602,651,653,671,672,673,674,675,676,677,678],"src/index.js");
+},494,[118,130,12,495,602,651,653,671,672,673,674,679,680,681,682],"src/index.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -86809,6 +86809,10 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 
   var _reactNavigation = _require(_dependencyMap[3], "react-navigation");
 
+  var _hotSearchCell = _require(_dependencyMap[4], "./common/hotSearchCell");
+
+  var _hotSearchCell2 = _interopRequireDefault(_hotSearchCell);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -86851,7 +86855,37 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       _this.state = {
         keywords: '',
         historySearchs: [],
-        hotSearchs: ['小偷家族', '复仇者联盟3: 无限2战争', '西红柿首富', '灭绝', '死侍2', '我不是药神', '面对邪恶', '血猎', '吸血鬼传说', '纯洁心灵。逐梦演艺圈']
+        hotSearchs: [{
+          name: '小偷家族',
+          id: 26985127
+        }, {
+          name: '复仇者联盟3: 无限2战争',
+          id: 26985127
+        }, {
+          name: '西红柿首富',
+          id: 26985127
+        }, {
+          name: '灭绝',
+          id: 26985127
+        }, {
+          name: '死侍2',
+          id: 26985127
+        }, {
+          name: '我不是药神',
+          id: 26985127
+        }, {
+          name: '面对邪恶',
+          id: 26985127
+        }, {
+          name: '血猎',
+          id: 26985127
+        }, {
+          name: '吸血鬼传说',
+          id: 26985127
+        }, {
+          name: '纯洁心灵。逐梦演艺圈',
+          id: 26985127
+        }]
       };
       return _this;
     }
@@ -86864,13 +86898,14 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       value: function render() {
         var _this2 = this;
 
+        var hotSearchs = this.state.hotSearchs;
         return _react3.default.createElement(
           _reactNative.View,
           {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 67
             }
           },
           _react3.default.createElement(
@@ -86879,7 +86914,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               style: styles.header,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 64
+                lineNumber: 68
               }
             },
             _react3.default.createElement(
@@ -86888,11 +86923,11 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 style: styles.searchBar,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 65
+                  lineNumber: 69
                 }
               },
               _react3.default.createElement(_reactNative.Image, {
-                source: _require(_dependencyMap[4], './resource/search.png'),
+                source: _require(_dependencyMap[5], './resource/search.png'),
                 style: {
                   marginLeft: 5,
                   width: 20,
@@ -86900,7 +86935,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 },
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 66
+                  lineNumber: 70
                 }
               }),
               _react3.default.createElement(_reactNative.TextInput, {
@@ -86917,7 +86952,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 },
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 70
+                  lineNumber: 74
                 }
               })
             ),
@@ -86935,10 +86970,28 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 81
+                lineNumber: 85
               }
             })
-          )
+          ),
+          hotSearchs.length > 0 && _react3.default.createElement(_reactNative.FlatList, {
+            data: hotSearchs,
+            key: hotSearchs.key,
+            renderItem: function renderItem(item) {
+              return _react3.default.createElement(_hotSearchCell2.default, {
+                item: item,
+                navigation: _this2.props.navigation,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 92
+                }
+              });
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 88
+            }
+          })
         );
       }
     }]);
@@ -86983,7 +87036,219 @@ __d(function (global, _require, module, exports, _dependencyMap) {
       padding: 0
     }
   });
-},674,[118,130,12,495,656],"src/searchView.js");
+},674,[118,130,12,495,675,656],"src/searchView.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = _require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _class,
+        _temp,
+        _jsxFileName = "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/src/common/hotSearchCell.js";
+
+    var _reactNative = _require(_dependencyMap[2], "react-native");
+
+    var _star = _require(_dependencyMap[3], "./star");
+
+    var _star2 = _interopRequireDefault(_star);
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        HotSearchCell: {
+            displayName: "HotSearchCell"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/Users/xiwangwang/Documents/react-native/RNNavigationDemo/src/common/hotSearchCell.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var HotSearchCell = _wrapComponent("HotSearchCell")((_temp = _class = function (_React$Component) {
+        _inherits(HotSearchCell, _React$Component);
+
+        function HotSearchCell(props) {
+            _classCallCheck(this, HotSearchCell);
+
+            return _possibleConstructorReturn(this, (HotSearchCell.__proto__ || Object.getPrototypeOf(HotSearchCell)).call(this, props));
+        }
+
+        _createClass(HotSearchCell, [{
+            key: "render",
+            value: function render() {
+                var item = this.props.item;
+                var navigate = this.props.navigation.navigate;
+                var imgUrls = [_require(_dependencyMap[4], '../resource/1st.png'), _require(_dependencyMap[5], '../resource/2st.png'), _require(_dependencyMap[6], '../resource/3st.png')];
+                return _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    {
+                        style: styles.hotList,
+                        onPress: function onPress() {
+                            return navigate('MovieDetail', {
+                                id: item.item.id,
+                                callback: function callback(data) {
+                                    alert(data);
+                                }
+                            });
+                        },
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 30
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.View,
+                        {
+                            style: {
+                                flex: 1,
+                                flexDirection: 'row',
+                                alignItems: 'center'
+                            },
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 40
+                            }
+                        },
+                        item.index < 3 ? _react3.default.createElement(_reactNative.Image, {
+                            source: imgUrls[item.index],
+                            style: styles.rankImg,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 47
+                            }
+                        }) : _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 52
+                                }
+                            },
+                            (item.index + 1).toString() + '、'
+                        ),
+                        _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                                style: styles.smallFont,
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 54
+                                }
+                            },
+                            item.item.name
+                        )
+                    )
+                );
+            }
+        }]);
+
+        return HotSearchCell;
+    }(_react3.default.Component), _class.defaultProps = {
+        item: null
+    }, _temp));
+
+    exports.default = HotSearchCell;
+
+    var styles = _reactNative.StyleSheet.create({
+        rankImg: {
+            width: 16,
+            height: 16
+        },
+        smallFont: {
+            lineHeight: 20,
+            fontSize: 12
+        },
+        star: {
+            marginRight: 2
+        },
+        hotList: {
+            paddingLeft: 18,
+            paddingRight: 18,
+            borderBottomWidth: 1,
+            borderBottomColor: '#EFEFEF',
+            height: 45
+        },
+        lastList: {
+            borderBottomWidth: 0
+        },
+        title: {
+            marginTop: 15,
+            fontWeight: '900',
+            fontSize: 15
+        },
+        pay: {
+            width: 50,
+            height: 25,
+            marginLeft: 20,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderWidth: 1,
+            borderColor: '#FF4E65',
+            borderRadius: 5
+        }
+    });
+},675,[118,130,12,659,676,677,678],"src/common/hotSearchCell.js");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 64,
+    "height": 64,
+    "scales": [1],
+    "hash": "e1b09cd3114211bedceaebf863185e79",
+    "name": "1st",
+    "type": "png"
+  });
+},676,[326],"src/resource/1st.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 64,
+    "height": 64,
+    "scales": [1],
+    "hash": "70a4393e7bef29e9f45a207da3f61691",
+    "name": "2st",
+    "type": "png"
+  });
+},677,[326],"src/resource/2st.png");
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/src/resource",
+    "width": 64,
+    "height": 64,
+    "scales": [1],
+    "hash": "79e1439d91f4d0473039a6511398701b",
+    "name": "3st",
+    "type": "png"
+  });
+},678,[326],"src/resource/3st.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
 	module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
 		"__packager_asset": true,
@@ -86995,7 +87260,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
 		"name": "react-navigation",
 		"type": "png"
 	});
-},675,[326],"src/resource/react-navigation.png");
+},679,[326],"src/resource/react-navigation.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -87007,7 +87272,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "tab-movie",
     "type": "png"
   });
-},676,[326],"src/resource/tab-movie.png");
+},680,[326],"src/resource/tab-movie.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -87019,7 +87284,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "tab-pic",
     "type": "png"
   });
-},677,[326],"src/resource/tab-pic.png");
+},681,[326],"src/resource/tab-pic.png");
 __d(function (global, _require, module, exports, _dependencyMap) {
   module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -87031,7 +87296,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     "name": "tab-mine",
     "type": "png"
   });
-},678,[326],"src/resource/tab-mine.png");
+},682,[326],"src/resource/tab-mine.png");
 require(52);
 require(11);
 //# sourceMappingURL=index.map
