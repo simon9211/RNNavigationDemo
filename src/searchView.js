@@ -31,7 +31,18 @@ const { width, height } = Dimensions.get('window');
         this.state = {
             keywords: '',
             historySearchs: [],
-            hotSearchs: [{name:'小偷家族',id:26985127}, {name:'复仇者联盟3: 无限2战争',id:26985127}, {name:'西红柿首富',id:26985127}, {name:'灭绝',id:26985127}, {name:'死侍2',id:26985127}, {name:'我不是药神',id:26985127}, {name:'面对邪恶',id:26985127}, {name:'血猎',id:26985127}, {name:'吸血鬼传说',id:26985127}, {name:'纯洁心灵。逐梦演艺圈',id:26985127}]
+            hotSearchs: [
+                          {name:'小偷家族',id:26985127}, 
+                          {name:'复仇者联盟3: 无限2战争',id:26985127}, 
+                          {name:'西红柿首富',id:26985127}, 
+                          {name:'灭绝',id:26985127}, 
+                          {name:'死侍2',id:26985127}, 
+                          {name:'我不是药神',id:26985127}, 
+                          {name:'面对邪恶',id:26985127}, 
+                          {name:'血猎',id:26985127}, 
+                          {name:'吸血鬼传说',id:26985127}, 
+                          {name:'纯洁心灵。逐梦演艺圈',id:26985127}
+                        ]
         }
     }
     static navigationOptions = ({ navigation }) => ({
@@ -75,6 +86,7 @@ const { width, height } = Dimensions.get('window');
                         style={styles.search} 
                         multiline={true}
                         underlineColorAndroid='transparent'
+                        keyboardType='default'
                         numberOfLines={1}
                         placeholder='搜索影视'
                         value={this.state.keywords}
