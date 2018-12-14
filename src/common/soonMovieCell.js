@@ -25,12 +25,13 @@ import {
 
     render() {
         const {item ,movies} = this.props;
+        const {navigate} = this.props.navigation;
         return (
             <TouchableOpacity
                 style={[
                     styles.soonList, item.key + 1 == movies && styles.lastList
                 ]}
-                onPress={() => navigate('Detail', {
+                onPress={() => navigate('MovieDetail', {
                     id: item.value.id,
                     callback: (data) => {
                         //this.setState({childState: data})

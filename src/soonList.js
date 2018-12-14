@@ -77,7 +77,7 @@ import SoonMovieCell from './common/soonMovieCell';
                 refreshing={this.state.refreshing}
                 key={movies.key}
                 renderItem={({item}) => {
-                    return <SoonMovieCell item={item} moviesCount={movies.length}/>
+                    return <SoonMovieCell item={item} moviesCount={movies.length} navigation={this.props.navigation}/>
                 }}/>}
           </View>
         ); 
